@@ -40,7 +40,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/taskflow.git
+git clone https://github.com/your-username/to-do.git
 cd taskflow
 
 # Install dependencies
@@ -77,7 +77,7 @@ TaskFlow was deployed to platforms like:
 ## 📁 Project Structure (Simplified)
 
 ```
-taskflow/
+to-do/
 ├── components/       # Reusable UI components
 ├── pages/            # Next.js pages
 ├── styles/           # Tailwind & global styles
@@ -113,15 +113,6 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 If you like TaskFlow, give it a ⭐️ on GitHub and share it with friends!
 
-```
-
 ---
 
-Would you like me to:
-- Add CI/CD badge integration?
-- Include example screenshots?
-- Write the `LICENSE` file as well?
-
-Let me know what you’d like next!
-```
-![CI](https://github.com/cyb3rr31a/to-do/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/cyb3rr31a/to-do/workflows/CI%20for%20Next.js%20App/badge.svg)
