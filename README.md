@@ -113,15 +113,6 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 If you like TaskFlow, give it a ⭐️ on GitHub and share it with friends!
 
-```
-
 ---
 
-Would you like me to:
-- Add CI/CD badge integration?
-- Include example screenshots?
-- Write the `LICENSE` file as well?
-
-Let me know what you’d like next!
-```
-![CI](https://github.com/cyb3rr31a/to-do/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/cyb3rr31a/to-do/workflows/CI%20for%20Next.js%20App/badge.svg)
