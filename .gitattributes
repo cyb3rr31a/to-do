@@ -1,0 +1,2 @@
+# Enforce consistent LF endings across all OSes
+* text=auto eol=lf
