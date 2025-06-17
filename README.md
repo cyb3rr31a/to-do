@@ -21,7 +21,7 @@
 
 ## 📸 Screenshots
 
-![Website UI](./screenshots/taskflow.png)
+![Website UI](./screenshots/Taskflow.png)
 
 ---
 
