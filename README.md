@@ -40,8 +40,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/to-do.git
-cd taskflow
+git clone https://github.com/cyb3rr31a/to-do.git
+cd to-do
 
 # Install dependencies
 npm install
