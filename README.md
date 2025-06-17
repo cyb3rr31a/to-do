@@ -124,3 +124,4 @@ Would you like me to:
 
 Let me know what you’d like next!
 ```
+![CI](https://github.com/<your-username>/<your-repo>/actions/workflows/ci.yml/badge.svg)
