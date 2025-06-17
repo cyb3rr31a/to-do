@@ -40,7 +40,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/taskflow.git
+git clone https://github.com/your-username/to-do.git
 cd taskflow
 
 # Install dependencies
@@ -77,7 +77,7 @@ TaskFlow was deployed to platforms like:
 ## 📁 Project Structure (Simplified)
 
 ```
-taskflow/
+to-do/
 ├── components/       # Reusable UI components
 ├── pages/            # Next.js pages
 ├── styles/           # Tailwind & global styles
