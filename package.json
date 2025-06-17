@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -68,6 +71,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.53.0",
     "@types/react": "18.3.23",
     "@types/uuid": "^9.0.7",
     "typescript": "5.8.3"

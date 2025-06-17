@@ -1,0 +1,91 @@
+# Page snapshot
+
+```yaml
+- img
+- heading "TaskFlow" [level=1]
+- paragraph: Organize your day, achieve your goals
+- img
+- text: Total
+- paragraph: "4"
+- img
+- text: Done
+- paragraph: "2"
+- img
+- text: Active
+- paragraph: "2"
+- img
+- text: Today
+- paragraph: "2"
+- heading "Add New Task" [level=3]:
+  - img
+  - text: Add New Task
+- textbox "What needs to be done?"
+- button "Add Task" [disabled]:
+  - img
+  - text: Add Task
+- button "All 4":
+  - img
+  - text: All 4
+- button "Active 2":
+  - img
+  - text: Active 2
+- button "Completed 2":
+  - img
+  - text: Completed 2
+- button "Clear Completed":
+  - img
+  - text: Clear Completed
+- checkbox [checked]:
+  - img
+- heading "Task 4" [level=3]
+- img
+- button:
+  - img
+- img
+- text: medium 👤 personal Jun 17, 2025
+- checkbox [checked]:
+  - img
+- heading "Task 3" [level=3]
+- img
+- button:
+  - img
+- img
+- text: medium 👤 personal Jun 17, 2025
+- checkbox
+- heading "Task 2" [level=3]
+- img
+- button:
+  - img
+- img
+- text: medium 👤 personal Jun 17, 2025
+- checkbox
+- heading "Task 1" [level=3]
+- img
+- button:
+  - img
+- img
+- text: medium 👤 personal Jun 17, 2025
+- region "Notifications alt+T":
+  - list:
+    - status:
+      - img
+      - text: Task completed! 🎉
+    - status:
+      - img
+      - text: Task completed! 🎉
+    - status:
+      - img
+      - text: Task added successfully!
+    - status:
+      - img
+      - text: Task added successfully!
+    - status:
+      - img
+      - text: Task added successfully!
+    - status:
+      - img
+      - text: Task added successfully!
+- alert
+- button "Open Next.js Dev Tools":
+  - img
+```

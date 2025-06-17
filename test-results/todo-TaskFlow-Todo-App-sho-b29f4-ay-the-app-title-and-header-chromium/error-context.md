@@ -1,0 +1,39 @@
+# Page snapshot
+
+```yaml
+- img
+- heading "TaskFlow" [level=1]
+- paragraph: Organize your day, achieve your goals
+- img
+- text: Total
+- paragraph: "0"
+- img
+- text: Done
+- paragraph: "0"
+- img
+- text: Active
+- paragraph: "0"
+- img
+- text: Today
+- paragraph: "0"
+- heading "Add New Task" [level=3]:
+  - img
+  - text: Add New Task
+- textbox "What needs to be done?"
+- button "Add Task" [disabled]:
+  - img
+  - text: Add Task
+- button "All 0":
+  - img
+  - text: All 0
+- button "Active 0":
+  - img
+  - text: Active 0
+- button "Completed 0":
+  - img
+  - text: Completed 0
+- img
+- heading "Welcome to TaskFlow!" [level=3]
+- paragraph: You don't have any tasks yet. Create your first task to get started.
+- alert
+```

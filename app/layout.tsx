@@ -5,11 +5,13 @@ import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const viewport = {
+  themeColor: '#3B82F6',
+}
 export const metadata: Metadata = {
   title: 'TaskFlow - Todo App',
   description: 'A beautiful and powerful todo app with PWA capabilities',
   manifest: '/manifest.json',
-  themeColor: '#3B82F6',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
