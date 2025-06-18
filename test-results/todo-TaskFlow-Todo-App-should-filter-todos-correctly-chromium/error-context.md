@@ -41,14 +41,14 @@
 - button:
   - img
 - img
-- text: medium 👤 personal Jun 17, 2025
+- text: medium 👤 personal Jun 18, 2025
 - checkbox
 - heading "Active task 1" [level=3]
 - img
 - button:
   - img
 - img
-- text: medium 👤 personal Jun 17, 2025
+- text: medium 👤 personal Jun 18, 2025
 - region "Notifications alt+T":
   - list:
     - status:
