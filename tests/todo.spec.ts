@@ -60,17 +60,15 @@ test.describe('TaskFlow Todo App', () => {
     await expect(page.getByPlaceholder('Add more details...')).toBeVisible();
     await page.getByPlaceholder('Add more details...').fill('Prepare slides and practice presentation for Monday meeting');
     
-    // Set priority to high - click the first select trigger
-    await page.locator('[role="combobox"]').first().click();
-    // Wait for dropdown to open and click the high priority option
+    // Set priority to high - be more specific with the selector
+    await page.locator('button[role="combobox"]').first().click();
     await page.waitForSelector('[role="option"]');
-    await page.locator('[role="option"]').filter({ hasText: 'High' }).click();
+    await page.getByRole('option', { name: /high/i }).first().click();
     
-    // Set category to work - click the second select trigger
-    await page.locator('[role="combobox"]').nth(1).click();
-    // Wait for dropdown to open and click the work option
+    // Set category to work - be more specific with the selector
+    await page.locator('button[role="combobox"]').nth(1).click();
     await page.waitForSelector('[role="option"]');
-    await page.locator('[role="option"]').filter({ hasText: 'Work' }).click();
+    await page.getByRole('option', { name: /work/i }).first().click();
     
     // Set due date (tomorrow)
     const tomorrow = new Date();
@@ -127,8 +125,9 @@ test.describe('TaskFlow Todo App', () => {
     // Wait for todo to appear
     await expect(page.getByText('Task to delete')).toBeVisible();
     
-    // Delete the todo - look for the trash icon button more specifically
-    await page.locator('button').filter({ has: page.locator('svg') }).filter({ hasText: '' }).first().click();
+    // Delete the todo - find the delete button within the todo item
+    const todoItem = page.locator('.space-y-3 > div').first();
+    await todoItem.locator('button').last().click(); // The delete button is the last button in the todo item
     
     // Wait for deletion animation
     await page.waitForTimeout(1000);
@@ -154,20 +153,21 @@ test.describe('TaskFlow Todo App', () => {
     await page.locator('[role="checkbox"]').first().click();
     await page.waitForTimeout(500);
     
-    // Test Active filter - be more specific to avoid the stats card
-    await page.locator('button').filter({ hasText: 'Active' }).filter({ has: page.locator('svg') }).click();
+    // Test Active filter - target the filter button specifically
+    const filterSection = page.locator('.flex.flex-col.sm\\:flex-row.gap-4');
+    await filterSection.getByRole('button', { name: /Active/ }).click();
     await expect(page.getByText('Active task 1')).toBeVisible();
     await expect(page.getByText('Active task 2')).toBeVisible();
     await expect(page.getByText('Task to complete')).not.toBeVisible();
     
     // Test Completed filter
-    await page.locator('button').filter({ hasText: 'Completed' }).filter({ has: page.locator('svg') }).click();
+    await filterSection.getByRole('button', { name: /Completed/ }).nth(0).click();
     await expect(page.getByText('Task to complete')).toBeVisible();
     await expect(page.getByText('Active task 1')).not.toBeVisible();
     await expect(page.getByText('Active task 2')).not.toBeVisible();
     
     // Test All filter
-    await page.locator('button').filter({ hasText: 'All' }).filter({ has: page.locator('svg') }).click();
+    await filterSection.getByRole('button', { name: /All/ }).click();
     await expect(page.getByText('Active task 1')).toBeVisible();
     await expect(page.getByText('Active task 2')).toBeVisible();
     await expect(page.getByText('Task to complete')).toBeVisible();
@@ -192,8 +192,8 @@ test.describe('TaskFlow Todo App', () => {
     await checkboxes.nth(1).click();
     await page.waitForTimeout(300);
     
-    // Clear completed tasks
-    await page.getByRole('button', { name: 'Clear Completed' }).click();
+    // Clear completed tasks - be specific about the Clear Completed button
+    await page.getByRole('button', { name: /Clear Completed/ }).click();
     await page.waitForTimeout(1000);
     
     // Verify only active task remains
@@ -290,8 +290,7 @@ test.describe('TaskFlow Todo App', () => {
     await page.getByPlaceholder('What needs to be done?').fill('Toast test task');
     await page.getByRole('button', { name: 'Add Task' }).click();
     
-    // Look for toast notification - use a more specific approach
-    // The toast should appear with the success message
+    // Look for toast notification - just check for the text
     await expect(page.getByText('Task added successfully!')).toBeVisible({ timeout: 3000 });
   });
 
