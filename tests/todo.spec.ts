@@ -96,8 +96,13 @@ test.describe('TaskFlow Todo App', () => {
     // Wait for todo to appear
     await expect(page.getByText('Test task')).toBeVisible();
     
+    // Wait for the checkbox to be visible and enabled before clicking
+    const checkbox = page.locator('[role="checkbox"]').first();
+    await expect(checkbox).toBeVisible({ timeout: 5000 });
+    await expect(checkbox).toBeEnabled();
+
     // Complete the todo - use the custom checkbox component
-    await page.locator('[role="checkbox"]').first().click();
+    await checkbox.click();
     
     // Wait a moment for the UI to update
     await page.waitForTimeout(500);
@@ -106,8 +111,11 @@ test.describe('TaskFlow Todo App', () => {
     await expect(page.locator('text=Test task').first()).toHaveClass(/line-through/);
     
     // Uncomplete the todo
-    await page.locator('[role="checkbox"]').first().click();
-    
+    const checkbox = page.locator('[role="checkbox"]').first();
+    await expect(checkbox).toBeVisible({ timeout: 5000 });
+    await expect(checkbox).toBeEnabled();
+    await checkbox.click();
+        
     // Wait a moment for the UI to update
     await page.waitForTimeout(500);
     
