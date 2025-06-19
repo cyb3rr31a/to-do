@@ -111,10 +111,10 @@ test.describe('TaskFlow Todo App', () => {
     await expect(page.locator('text=Test task').first()).toHaveClass(/line-through/);
     
     // Uncomplete the todo
-    const checkbox = page.locator('[role="checkbox"]').first();
-    await expect(checkbox).toBeVisible({ timeout: 5000 });
-    await expect(checkbox).toBeEnabled();
-    await checkbox.click();
+    const checkbox2 = page.locator('[role="checkbox"]').first();
+    await expect(checkbox2).toBeVisible({ timeout: 5000 });
+    await expect(checkbox2).toBeEnabled();
+    await checkbox2.click();
         
     // Wait a moment for the UI to update
     await page.waitForTimeout(500);
